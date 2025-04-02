@@ -79,3 +79,29 @@ In the template, we have an `api.ts`, and `storage.ts`. These export the created
 ---
 
 **Join our community** [Discord](https://sst.dev/discord) | [YouTube](https://www.youtube.com/c/sst-dev) | [X.com](https://x.com/SST_dev)
+
+
+
+
+npx aws-api-gateway-cli-test \
+--user-pool-id=us-east-1_OofgCx6FT \
+--app-client-id=1fc2e52rubvu19e19mb6jenrlk \
+--cognito-region=us-east-1 \
+--identity-pool-id=us-east-1:d114157c-d4d2-4aba-bba5-2c35cdc17739 \
+--invoke-url=https://bcwx5xhqz3.execute-api.us-east-1.amazonaws.com \
+--api-gateway-region=us-east-1 \
+--username='admin@example.com' \
+--password='Passw0rd!' \
+--path-template='/notes' \
+--method='POST' \
+--body='{"content":"hello world","attachment":"hello.jpg"}'
+
+   Api: https://bcwx5xhqz3.execute-api.us-east-1.amazonaws.com
+   ---
+   IdentityPool: us-east-1:d114157c-d4d2-4aba-bba5-2c35cdc17739
+   Region: us-east-1
+   UserPool: us-east-1_OofgCx6FT
+   UserPoolClient: 1fc2e52rubvu19e19mb6jenrlk
+
+
+

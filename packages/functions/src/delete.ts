@@ -10,7 +10,7 @@ export const main = Util.handler(async (event) => {
     const params = {
         TableName: Resource.Notes.name,
         Key: {
-            userId: "123",
+            userId: event.requestContext.authorizer?.iam.cognitoIdentity.identityId,
             noteId: event?.pathParameters?.id, // Id of the note to delete.
         }
     }
